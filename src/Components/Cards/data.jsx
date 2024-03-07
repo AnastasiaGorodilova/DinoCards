@@ -1,0 +1,50 @@
+export let words = [
+  {
+    id: "7211",
+    english: "travel",
+    transcription: "[ˈtrævl]",
+    russian: "путешествовать",
+    tags: "travelling",
+    tags_json: '["travelling"]',
+  },
+  {
+    id: "7259",
+    english: "despair",
+    transcription: "[dɪˈspeə]",
+    russian: "отчаяние",
+    tags: "emotions",
+    tags_json: '["emotions"]',
+  },
+  {
+    id: "7245",
+    english: "hello",
+    transcription: "[ˈtrævl]",
+    russian: "привет",
+    tags: "приветствие ",
+    tags_json: '[""]',
+  },
+  {
+    id: "7236",
+    english: "cat",
+    transcription: "[kæt]",
+    russian: "кошка",
+    tags: "",
+    tags_json: '[""]',
+  },
+  {
+    id: "7285",
+    english: "dog",
+    transcription: "[dɒg]",
+    russian: "собака",
+    tags: "",
+    tags_json: '[""]',
+  },
+  {
+    id: "7288",
+    english: "money",
+    transcription: "money",
+    russian: "деньги",
+    tags: "",
+    tags_json: '[""]',
+  }
+];
