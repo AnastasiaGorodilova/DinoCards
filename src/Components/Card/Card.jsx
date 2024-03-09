@@ -1,9 +1,9 @@
 import { useState } from 'react'
-import './Cards.css'
-import { words } from './data.jsx'
+import './Card.css'
+import { words } from '../data.jsx'
 
 
-export default function Cards({ english, transcription, russian }) {
+export default function Card({ english, transcription, russian }) {
 
     const [content, setContent] = useState('')
     const [isHiden, setIsHiden] = useState(false);

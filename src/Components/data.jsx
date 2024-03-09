@@ -24,7 +24,7 @@ export let words = [
     tags_json: '[""]',
   },
   {
-    id: "7236",
+    id: "7201",
     english: "cat",
     transcription: "[kæt]",
     russian: "кошка",
