@@ -1,0 +1,21 @@
+.training{
+    height: 40vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5vw;
+}
+
+span{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.button{
+    background-color: transparent;
+    border: 0;
+}
+.button:hover{
+    cursor: pointer;
+}

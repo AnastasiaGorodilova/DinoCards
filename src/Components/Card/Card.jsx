@@ -14,11 +14,11 @@ export default function Card({ english, transcription, russian }) {
     }
 
     return (
-        <div className={'card-body'}>
-            <h1 className={'card-english'}>{english}</h1>
-            <h2 className={'card-transcription'}>{transcription}</h2>
-            <p className='card-russian '>
-                <button className={isHiden ? 'hide' : ''} onClick={() => handleClick()}>
+        <div className={'cardBody'}>
+            <h1 className={'cardEnglish'}>{english}</h1>
+            <h2 className={'cardTranscription'}>{transcription}</h2>
+            <p className='cardRussian '>
+                <button className={`button  ${isHiden ? ' hide' : ''}`} onClick={() => handleClick()}>
                     Проверить</button>
                 {content}</p>
         </div >

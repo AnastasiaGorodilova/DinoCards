@@ -1,5 +1,5 @@
 
-.card-body{
+.cardBody{
     margin: 0;
     padding: 0;
     height: 280px;
@@ -12,7 +12,7 @@
     border-radius: 30px;
 }
 
-.card-english{
+.cardEnglish{
     margin: 0;
     padding: 0;
     display: flex;
@@ -20,29 +20,25 @@
 
 }
 
-.card-transcription{
+.cardTranscription{
     margin: 0;
     padding: 0;
-    color: rgb(109, 109, 109);
+    color: #6d6d6d;
     font-weight: 400;
     font-size: 18px;
 }
 
-.card-russian{
+.cardRussian{
     margin: 0;
     padding: 0;
     display: flex;
     align-items: center;
-    
-}
-
-.card-russian{
     grid-row: 3/4;
     color: #935fb6;
-    font-size: 18px;
+    font-size: 18px;  
 }
 
-button{
+.button{
     height: 30px;
     width: 120px;
     font-family: 'Comfortaa', sans-serif;
@@ -53,7 +49,10 @@ button{
     border-radius: 30px;
     color: white;
 }
-
+.button:hover{
+    border-color:  #935fb680;
+    background-color: #935fb680;
+}
 
 .hide{
     display: none;

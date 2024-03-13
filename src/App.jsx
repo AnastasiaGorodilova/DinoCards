@@ -2,7 +2,7 @@ import { useState } from 'react'
 import './App.css'
 import Header from './Components/Header/Header.jsx'
 import Footer from './Components/Footer/Footer.jsx'
-import Traning from './Components/Traning/Traning.jsx'
+import Training from './Components/Training/Training.jsx'
 
 
 export default function App() {
@@ -10,9 +10,9 @@ export default function App() {
   return (
     <>
       <Header />
-
-      <Traning />
-
+      <main>
+        <Training />
+      </main>
       <Footer />
     </>
   )
