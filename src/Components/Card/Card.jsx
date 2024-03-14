@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import './Card.css'
-import { words } from '../data.jsx'
+import { data } from '../data.json'
 
 
 export default function Card({ english, transcription, russian }) {

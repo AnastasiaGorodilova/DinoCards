@@ -14,8 +14,8 @@ span{
 
 .button{
     background-color: transparent;
-    border: 0;
 }
+
 .button:hover{
     cursor: pointer;
 }

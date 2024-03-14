@@ -1,9 +1,10 @@
 import { useState } from 'react'
 import style from './Training.module.css'
 import Card from '../Card/Card.jsx'
-import { words } from '../data.jsx'
+import { data } from '../data.json'
 import { UilAngleRightB } from '@iconscout/react-unicons'
 import { UilAngleLeftB } from '@iconscout/react-unicons'
+import { render } from 'react-dom'
 
 export default function Training() {
 
@@ -16,7 +17,7 @@ export default function Training() {
     }
 
     function handleClickUp() {
-        if (i <= words.length - 2) {
+        if (i <= data.length - 2) {
             setI(i + 1)
         }
         else {
@@ -27,15 +28,15 @@ export default function Training() {
 
 
     return (
-        <>
+        <main>
             <section className={style.training}>
                 <UilAngleLeftB size="70" color=" #935fb680" className={style.button} onClick={() => handleClickDown()} />
 
-                <Card {...words.sort((a, b) => a.id - b.id)[i]} />
+                <Card {...data.sort((a, b) => a.id - b.id)[i]} />
 
                 <UilAngleRightB size="70" color=" #935fb680" className={style.button} onClick={() => handleClickUp()} />
             </section>
-            <span>{i + 1}/{words.length}</span>
-        </>
+            <span>{i + 1}/{data.length}</span>
+        </main>
     )
 }

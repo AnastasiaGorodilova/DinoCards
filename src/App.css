@@ -1,3 +1,21 @@
+header{
+    height: 80px;
+    width: 100%;
+    background-color: rgba(147, 95, 182, 0.5) ;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+}
+.header{
+    max-width: 900px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
 main{
     margin: 20vh;
 }
