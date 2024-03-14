@@ -1,28 +1,27 @@
 import { useState } from 'react'
 import './Card.css'
-import { data } from '../data.json'
+import { data } from '../../data.json'
 
+export default function Card({ english, transcription, russian, onCardChange }) {
 
-export default function Card({ english, transcription, russian }) {
-
-    const [content, setContent] = useState('')
     const [isHiden, setIsHiden] = useState(false);
+    let count = 0
+
 
     function handleClick() {
-        setContent(russian)
         setIsHiden(true)
+        onCardChange(count + 1)
     }
+
 
     return (
         <div className={'cardBody'}>
             <h1 className={'cardEnglish'}>{english}</h1>
             <h2 className={'cardTranscription'}>{transcription}</h2>
             <p className='cardRussian '>
-                <button className={`button  ${isHiden ? ' hide' : ''}`} onClick={() => handleClick()}>
-                    Проверить</button>
-                {content}</p>
+                {!isHiden && <button className='button' onClick={() => handleClick()} >Проверить</button>}
+                {isHiden && <>{russian}</>}
+            </p>
         </div >
     )
-
-
 }

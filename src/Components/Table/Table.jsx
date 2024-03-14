@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import style from './Table.module.css'
-import { data } from '../data.json'
+import { data } from '../../data.json'
 
 
 function TableData({ english, russian, tags, id }) {
@@ -43,10 +43,21 @@ function TableData({ english, russian, tags, id }) {
 export default function Table() {
     let sortTable = data.sort((a, b) => a.id - b.id)
 
-    const lastComponentId = sortTable[sortTable.length - 1]
+    let lastComponentId = sortTable[sortTable.length - 1]
+
+    const [lastId, setlastId] = useState(Number(lastComponentId.id) + 1)
 
     function handleClickCreate() {
-        lastComponentId.id
+        setlastId(lastId + 1)
+        data.push({
+            "id": lastId,
+            "english": "",
+            "transcription": "",
+            "russian": "",
+            "tags": "",
+            "tags_json": ""
+        })
+        console.log(data)
     }
 
     return (

@@ -10,6 +10,7 @@ header{
 }
 .header{
     max-width: 900px;
+    height: 100%;
     margin: auto;
     display: flex;
     justify-content: space-between;
