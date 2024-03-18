@@ -9,6 +9,7 @@ import './App.css'
 import Footer from './Components/Footer/Footer.jsx'
 import Training from './Components/Training/Training.jsx'
 import Table from './Components/Table/Table.jsx'
+import NoMatch from './Components/404/404.jsx';
 
 
 export default function App() {
@@ -18,9 +19,9 @@ export default function App() {
       <Router>
         <header>
           <div className='header'>
-            <Link to="/">ЛОГО</Link>
+            <Link to="/" className='logo'> <img src="../public/Logo.png" alt="Logo" /> DinoCards: Repeat & Roar</Link>
 
-            <Link to="/game">GAME</Link>
+            <Link to="/game">Game</Link>
 
           </div>
         </header>
@@ -29,6 +30,7 @@ export default function App() {
 
           <Route path="/" element={<Table />} />
           <Route path="/game" element={<Training />} />
+          <Route path="*" element={<NoMatch />} />
 
         </Routes>
 
