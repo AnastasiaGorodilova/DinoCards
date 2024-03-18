@@ -9,18 +9,20 @@ import { UilAngleLeftB } from '@iconscout/react-unicons'
 
 export default function Training({ index = 0 }) {
     const [i, setI] = useState(index)
-    const [isHiden, setIsHiden] = useState(false);
+    const [hidden, setHidden] = useState(false);
 
     function handleClickDown() {
-        setIsHiden(false)
+
         if (i > 0) {
+            setHidden(false)
             setI(i - 1)
         }
     }
 
     function handleClickUp() {
-        setIsHiden(false)
+
         if (i <= data.length - 2) {
+            setHidden(false)
             setI(i + 1)
         }
         /*
@@ -33,7 +35,7 @@ export default function Training({ index = 0 }) {
     const [totalCount, setTotalCount] = useState(0)
 
     function handleChange(count) {
-        setIsHiden(true)
+        setHidden(true)
         setTotalCount(totalCount + count)
     }
 
@@ -45,7 +47,7 @@ export default function Training({ index = 0 }) {
             <section className={style.training}>
                 <UilAngleLeftB size="70" color=" #935fb680" className={style.button} onClick={() => handleClickDown()} />
 
-                <Card {...data.sort((a, b) => a.id - b.id)[i]} onCardChange={handleChange} isHiden={isHiden} />
+                <Card {...data.sort((a, b) => a.id - b.id)[i]} onCardChange={handleChange} hidden={hidden} />
 
                 <UilAngleRightB size="70" color=" #935fb680" className={style.button} onClick={() => handleClickUp()} />
             </section>

@@ -2,7 +2,7 @@ import { useState, useEffect, useRef } from 'react'
 import './Card.css'
 import { data } from '../data.json'
 
-export default function Card({ english, transcription, russian, onCardChange, isHiden, count = 0 }) {
+export default function Card({ english, transcription, russian, onCardChange, hidden }) {
 
 
     const buttonRef = useRef();
@@ -16,8 +16,8 @@ export default function Card({ english, transcription, russian, onCardChange, is
             <h1 className={'cardEnglish'}>{english}</h1>
             <h2 className={'cardTranscription'}>{transcription}</h2>
             <p className='cardRussian '>
-                {!isHiden && <button ref={buttonRef} className='button' onClick={() => onCardChange(count + 1)} isHiden={isHiden} >Проверить</button>}
-                {isHiden && <>{russian}</>}
+                {!hidden && <button ref={buttonRef} className='button' onClick={() => onCardChange(true)} hidden={hidden} >Проверить</button>}
+                {hidden && <>{russian}</>}
             </p>
         </div >
     )
