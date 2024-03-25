@@ -1,4 +1,4 @@
-.training{
+.training {
     height: 40vh;
     display: flex;
     justify-content: center;
@@ -6,16 +6,17 @@
     gap: 5vw;
 }
 
-span{
+span {
+    margin: 15px;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.button{
+.button {
     background-color: transparent;
 }
 
-.button:hover{
+.button:hover {
     cursor: pointer;
 }

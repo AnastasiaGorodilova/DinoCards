@@ -5,16 +5,24 @@ import { data } from '../../data.json'
 export default function TableData({ english, russian, tags, id }) {
 
     const [isEditing, setIsEditing] = useState(false)
-    const [isInputEmpty, setIsInputEmpty] = useState(false);
+    const [isInputEmpty, setIsInputEmpty] = useState(false)
+    const [tableData, settableData] = useState(data)
 
     const handleEdit = () => {
         setIsEditing(true)
-        setIsInputEmpty(true);
+        setIsInputEmpty(true)
     };
 
-    const [saveDisabled, setSaveDisabled] = useState(true);
+    const handleInputChange = (id, field, value) => {
+        const updatedData = tableData.map(item =>
+            item.id === id ? { ...item, [field]: value } : item
+        );
+        settableData(updatedData);
+    };
+
 
     const handleSave = () => {
+        console.log('Сохранено:', tableData);
     }
 
     const handleCancel = () => {
@@ -26,9 +34,21 @@ export default function TableData({ english, russian, tags, id }) {
     return (
         <>
             <tr key={id} className={style.line}>
-                <td className={`${style.column} ${isInputEmpty ? style.empty : ''}`}> {isEditing === true ? <input className={style.input} defaultValue={english} /> : english}</td>
-                <td className={`${style.column} ${isInputEmpty ? style.empty : ''}`}> {isEditing === true ? <input className={style.input} defaultValue={russian} /> : russian} </td >
-                <td className={`${style.column} ${isInputEmpty ? style.empty : ''}`}> {isEditing === true ? <input className={style.input} defaultValue={tags} /> : tags} </td >
+                <td className={`${style.column} ${isInputEmpty ? style.empty : ''}`}> {isEditing === true ? <input
+                    className={style.input}
+                    value={english}
+                    onChange={() => handleInputChange()}
+                /> : english} </td>
+                <td className={`${style.column} ${isInputEmpty ? style.empty : ''}`}> {isEditing === true ? <input
+                    className={style.input}
+                    value={russian}
+                    onChange={() => handleInputChange()}
+                /> : russian} </td >
+                <td className={`${style.column} ${isInputEmpty ? style.empty : ''}`}> {isEditing === true ? <input
+                    className={style.input}
+                    value={tags}
+                    onChange={() => handleInputChange()}
+                /> : tags} </td >
                 <td className={`${style.column} ${style.buttonArea}`}>{isEditing === true ?
                     <>
                         <button className={`${style.edit} ${style.button}`} onClick={handleSave}>Сохранить</button>
