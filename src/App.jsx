@@ -19,7 +19,7 @@ export default function App() {
       <Router>
         <header>
           <div className='header'>
-            <Link to="/" className='logo'> <img src="../public/Logo.png" alt="Logo" /> DinoCards: Repeat & Roar</Link>
+            <Link to="/" className='logo'> <img src="/logo.png" alt="Logo" /> DinoCards: Repeat & Roar</Link>
 
             <Link to="/game">Game</Link>
 

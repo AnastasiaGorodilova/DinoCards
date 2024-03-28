@@ -13,7 +13,7 @@ export default function Table() {
     function handleClickCreate() {
         setlastId(lastId + 1)
         data.push({
-            "id": lastId,
+            "id": `${lastId}`,
             "english": "",
             "transcription": "",
             "russian": "",
