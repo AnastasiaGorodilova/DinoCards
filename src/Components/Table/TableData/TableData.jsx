@@ -62,7 +62,7 @@ export default function TableData({ english, russian, tags, id }) {
                 /> : tags} </td >
                 <td className={`${style.column} ${style.buttonArea}`}>{isEditing === true ?
                     <>
-                        <button className={`${style.edit} ${style.button}`} onClick={handleSave} disabled={disabled}>Сохранить</button>
+                        <button className={`${style.edit} ${style.button}`} onClick={handleSave}>Сохранить</button>
                         <button className={`${style.edit} ${style.button}`} onClick={handleCancel}>Отмена</button>
                     </>
                     :
