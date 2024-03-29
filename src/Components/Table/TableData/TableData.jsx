@@ -20,6 +20,9 @@ export default function TableData({ english, russian, tags, id }) {
         if (value < 1) {
             setIsInputEmpty(true)
         }
+        else {
+            setIsInputEmpty(false)
+        }
 
         console.log(updateData, value)
     };
@@ -27,7 +30,7 @@ export default function TableData({ english, russian, tags, id }) {
 
     const handleSave = () => {
         setnewData(updateData)
-        console.log('Сохранено:', newData, updateData)
+        console.log('Сохранено:', updateData)
         setIsEditing(false)
     }
 
