@@ -13,7 +13,7 @@ export default function Training({ index = 0 }) {
 
     function handleClickDown() {
 
-        if (i > 0) {
+        if (id > 0) {
             setHidden(false)
             setId(id - 1)
         }
@@ -21,7 +21,7 @@ export default function Training({ index = 0 }) {
 
     function handleClickUp() {
 
-        if (i <= data.length - 2) {
+        if (id <= words.length - 2) {
             setHidden(false)
             setId(id + 1)
         }
@@ -51,7 +51,7 @@ export default function Training({ index = 0 }) {
 
                 <UilAngleRightB size="70" color=" #935fb680" className={style.button} onClick={() => handleClickUp()} />
             </section>
-            <span>{i + 1}/{words.length}</span>
+            <span>{id + 1}/{words.length}</span>
         </main>
     )
 }
