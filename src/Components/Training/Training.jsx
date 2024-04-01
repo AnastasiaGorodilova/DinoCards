@@ -1,21 +1,21 @@
 import { useState } from 'react'
 import style from './Training.module.css'
 import Card from '../Card/Card.jsx'
-import { data } from '../data.json'
+import { words, sortWords } from '../../App'
 import { UilAngleRightB } from '@iconscout/react-unicons'
 import { UilAngleLeftB } from '@iconscout/react-unicons'
 
 
 
 export default function Training({ index = 0 }) {
-    const [i, setI] = useState(index)
+    const [id, setId] = useState(index)
     const [hidden, setHidden] = useState(false);
 
     function handleClickDown() {
 
         if (i > 0) {
             setHidden(false)
-            setI(i - 1)
+            setId(id - 1)
         }
     }
 
@@ -23,7 +23,7 @@ export default function Training({ index = 0 }) {
 
         if (i <= data.length - 2) {
             setHidden(false)
-            setI(i + 1)
+            setId(id + 1)
         }
         /*
         else {
@@ -47,11 +47,11 @@ export default function Training({ index = 0 }) {
             <section className={style.training}>
                 <UilAngleLeftB size="70" color=" #935fb680" className={style.button} onClick={() => handleClickDown()} />
 
-                <Card {...data.sort((a, b) => a.id - b.id)[i]} onCardChange={handleChange} hidden={hidden} />
+                <Card {...sortWords[id]} onCardChange={handleChange} hidden={hidden} />
 
                 <UilAngleRightB size="70" color=" #935fb680" className={style.button} onClick={() => handleClickUp()} />
             </section>
-            <span>{i + 1}/{data.length}</span>
+            <span>{i + 1}/{words.length}</span>
         </main>
     )
 }

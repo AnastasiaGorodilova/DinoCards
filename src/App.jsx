@@ -10,10 +10,13 @@ import Footer from './Components/Footer/Footer.jsx'
 import Training from './Components/Training/Training.jsx'
 import Table from './Components/Table/Table.jsx'
 import NoMatch from './Components/404/404.jsx';
+import { data } from './Components/store/data.json'
+
+export const words = data
+export let sortWords = words.sort((a, b) => a.id - b.id)
 
 
 export default function App() {
-
   return (
     <>
       <Router>

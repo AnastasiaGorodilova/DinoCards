@@ -1,18 +1,16 @@
 import React, { useState } from 'react'
 import style from './Table.module.css'
-import { data } from '../data.json'
-import TableData from './TableData/TableData'
+import { words, sortWords } from '../../App.jsx'
+import TableData from '../TableData/TableData'
 
 
 export default function Table() {
-    let sortTable = data.sort((a, b) => a.id - b.id)
-
-    let lastComponentId = sortTable[sortTable.length - 1]
+    let lastComponentId = sortWords[sortWords.length - 1]
     const [lastId, setlastId] = useState(Number(lastComponentId.id) + 1)
 
     function handleClickCreate() {
         setlastId(lastId + 1)
-        data.push({
+        words.push({
             "id": `${lastId}`,
             "english": "",
             "transcription": "",
@@ -27,7 +25,7 @@ export default function Table() {
             <div className={style.tableArea}>
                 <table className={style.table}>
                     <tbody>
-                        {sortTable.map((table, id) => {
+                        {sortWords.map((table, id) => {
                             return <TableData key={id} {...table} />
                         })}
                     </tbody>
