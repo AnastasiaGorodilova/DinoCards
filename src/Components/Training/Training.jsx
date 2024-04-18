@@ -25,11 +25,7 @@ export default function Training({ index = 0 }) {
             setHidden(false)
             setId(id + 1)
         }
-        /*
-        else {
-            setI(0)
-        }
-        */
+        /* else { setI(0) } */
     }
 
     const [totalCount, setTotalCount] = useState(0)
