@@ -2,7 +2,7 @@ import { useState } from "react"
 import style from './WordsTable.module.css'
 import { words } from '../../App.jsx'
 
-export default function WordsTable({ english, russian, tags, id }) {
+export default function WordsTable({ id, english, transcription, russian, tags, tags_json }) {
 
     const [isEditing, setIsEditing] = useState(false)
     const [isInputEmpty, setIsInputEmpty] = useState(false)
@@ -22,7 +22,6 @@ export default function WordsTable({ english, russian, tags, id }) {
         console.log(updateData, value)
     };
 
-
     const handleSave = () => {
         setnewData(updateData)
         console.log('Сохранено:', updateData)
@@ -35,7 +34,6 @@ export default function WordsTable({ english, russian, tags, id }) {
         setIsEditing(false)
         setIsInputEmpty(false)
     }
-
 
     return (
         <>

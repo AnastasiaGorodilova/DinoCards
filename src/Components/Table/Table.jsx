@@ -5,6 +5,7 @@ import WordsTable from '../WordsTable/WordsTable.jsx'
 
 
 export default function Table() {
+
     let lastComponentId = sortWords[sortWords.length - 1]
     const [lastId, setlastId] = useState(Number(lastComponentId.id) + 1)
 
