@@ -1,8 +1,8 @@
 import { useState } from "react"
-import style from './TableData.module.css'
+import style from './WordsTable.module.css'
 import { words } from '../../App.jsx'
 
-export default function TableData({ english, russian, tags, id }) {
+export default function WordsTable({ english, russian, tags, id }) {
 
     const [isEditing, setIsEditing] = useState(false)
     const [isInputEmpty, setIsInputEmpty] = useState(false)

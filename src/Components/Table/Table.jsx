@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import style from './Table.module.css'
 import { words, sortWords } from '../../App.jsx'
-import TableData from '../TableData/TableData'
+import WordsTable from '../WordsTable/WordsTable.jsx'
 
 
 export default function Table() {
@@ -26,7 +26,7 @@ export default function Table() {
                 <table className={style.table}>
                     <tbody>
                         {sortWords.map((table, id) => {
-                            return <TableData key={id} {...table} />
+                            return <WordsTable key={id} {...table} />
                         })}
                     </tbody>
                 </table>

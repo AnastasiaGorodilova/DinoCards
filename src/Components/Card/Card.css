@@ -34,7 +34,7 @@
     display: flex;
     align-items: center;
     grid-row: 3/4;
-    color: #935fb6;
+    color: rgb(147, 95, 182);
     font-size: 18px;  
 }
 
@@ -44,12 +44,12 @@
     font-family: 'Comfortaa', sans-serif;
     font-weight: 600;
     font-style: normal;
-    background-color: #935fb6;
-    border: 1px solid #935fb6;
+    background-color: rgb(147, 95, 182);
+    border: 1px solid rgb(147, 95, 182);
     border-radius: 30px;
     color: white;
 }
 .button:hover{
-    border-color:  #935fb680;
-    background-color: #935fb680;
+    border-color:  rgba(147, 95, 182, 0.502);
+    background-color: rgba(147, 95, 182, 0.502);
 }
